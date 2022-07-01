@@ -43,9 +43,6 @@ class Calculator extends React.Component {
     });
   }
 
-  inputMode() {
-  }
-
   inputDot() {
     const { displayValue } = this.state;
 
@@ -112,7 +109,6 @@ class Calculator extends React.Component {
       this.inputDot();
     } else if (key === "%") {
       event.preventDefault();
-      this.inputMode();
     } else if (key === "Backspace") {
       event.preventDefault();
       this.clearLastChar();
@@ -153,7 +149,7 @@ class Calculator extends React.Component {
               <CalculatorKey className="key-sign" onPress={() => this.toggleSign()}>
                 ±
               </CalculatorKey>
-              <CalculatorKey className="key-percent" onPress={() => this.inputMode()}>
+              <CalculatorKey className="key-percent">
                 M
               </CalculatorKey>
             </div>
