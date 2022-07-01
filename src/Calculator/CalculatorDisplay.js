@@ -9,7 +9,6 @@ const CalculatorDisplay = (props) => {
     maximumFractionDigits: 6,
   });
 
-  // Add back missing .0 in e.g. 12.0
   const match = value.match(/\.\d*?(0*)$/);
 
   if (match) formattedValue += /[1-9]/.test(match[0]) ? match[1] : match[0];
